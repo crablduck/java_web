@@ -38,7 +38,7 @@ public class servlet_init extends HttpServlet {
     	System.out.println("servlet_init.service()");
     }
     
-    @Override
+    @Override 
     public void destroy() {
     	// TODO Auto-generated method stub
     	System.out.println("servlet_init.destroy()");
