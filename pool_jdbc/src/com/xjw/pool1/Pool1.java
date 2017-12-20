@@ -10,7 +10,7 @@ public class Pool1 {
 
 	//创建Connection的容器， 因为里面经常要进行插入删除connection 所以用linklist比较好
 	private static LinkedList<Connection> list = new LinkedList<Connection>();
-	
+	 
 	//初始化connection_pool
 	static{
 		for (int i = 0; i < 20; i++) {
