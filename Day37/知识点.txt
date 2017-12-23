@@ -1,0 +1,95 @@
+Day35知识点：
+
+1.设置响应头部信息（过3秒后刷新url页面）
+	response.setHeader("refresh", "3;url=welcome.html");
+	
+2.跳转 -- 重定向
+	语法：响应.sendRedirect("index.html");
+		  response.sendRedirect("index.html");
+	理解：
+		重新定义方法，由响应告诉客户端(浏览器)重新发送请求给指定地址
+		
+3.session
+	session是属于HttpSession这个类的
+	session可以存储数据和取出数据
+	如何得到session对象：request.getSession()
+	存储数据：setAttribute(key, value);
+	取出数据：getAttribute(key)
+	理解：每个客户端都会有自己的session对象，对象里存储的值互不干扰
+	session生命周期：获得session对象就创建，30分钟后自动销毁(学到监听器这个知识点时，会对session的生命周期更加理解)
+
+Day36知识点：
+	
+1.jsp
+	初步理解：html+java
+	解释：底层默认实现servlet，默认给你九大内置对象
+	语法：
+		<% ...java代码（获取从服务端存储的信息）... %>
+		<%= ...展示值... %>
+		
+2.跳转 --- 转发
+	语法：request.getRequestDispatcher("login.jsp").forward(request, response);
+	理解：某个servlet自己搞不定时，就会由“请求”调用转发方法，去发送给具体的地址指令
+
+3.存值的声明周期：
+
+	request.getSession().setAttribute(key,value) --- 存入Session，默认30分钟内有效
+	request.setAttribute(key,value) --- 存入请求，请求、响应结束时，数据被清空
+	
+4.跳转  ：  重定向  vs 转发
+	位置			跳转方式		存入数据		jsp取出数据
+	服务器		重定向		Session		yes
+							request		no
+	服务器		转发			Session		yes
+							request		yes
+	
+	应用：如果存入数据仅仅是展示，用转发形式跳转
+	
+5.Cookie
+	5.1添加Cookie
+		//创建Cookie
+		Cookie cookie = new Cookie("username",URLEncoder.encode(username, "UTF-8"));
+		//设置时间
+		cookie.setMaxAge(60*60);
+		//把Cookie添加熬响应里，客户端拿到响应就会在客户端中添加一个Cookie
+		response.addCookie(cookie);
+		
+	5.2取出Cookie
+		//获取出Cookie数组
+		Cookie[] cookies = request.getCookies();
+		if(cookies != null){
+			//遍历Cookie
+			for(Cookie cookie : cookies){
+				//判断Cookis中是否有叫username的key/name
+				if(cookie.getName().equals("username")){
+					
+					//获取出对应的值
+					cookie.getValue;
+				}
+			}
+		}
+		
+	5.3删除Cookie：把添加Cookie代码的设置时间变为0，就是删除指定key的Cookie
+
+Day37知识点：
+	1.获得请求地址
+		String url = request.getHeader("Referer");
+	2.dto
+		实体类专门是放数据，而不是展示数据
+		当我们实体类里存放的数据不满足展示的需求时，使用dto编程思想
+		如果要展示数据则使用dto
+
+作业：
+	1.当天编写到哪里，你就编写到哪里
+	2.老师修改密码功能
+	3.预习MVC设计模式和JSTL和EL
+
+
+
+
+
+
+
+
+
+
