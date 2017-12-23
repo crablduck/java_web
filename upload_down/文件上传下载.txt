@@ -1,0 +1,18 @@
+
+1.上传
+	1.1	注意事项
+		1.需要使用组件<input type="file" name="file"> 
+		2.请求方式必须是 post
+			get只能传递字符串
+			post可以传递字符串、二进制信息
+		3.表单必须设置enctype="multipart/form-data" 
+		
+	1.2 注意部署路径 和 工作空间路径 的区别
+
+
+
+2.下载
+
+	浏览器能够解析的文件，就直接展示，比如图片
+	中文文件下载，就不能用简单的方法<a href="download\photo.zip">photo.zip</a>
+	
