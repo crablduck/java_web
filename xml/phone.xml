@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phones>
+	<phone id="001">
+		<type>三星</type>
+		<price>2000</price>
+		<store>400000</store>
+	</phone>
+
+	<phone id="002">
+		<type>小米</type>
+		<price>999</price>
+		<store>10</store>
+	</phone>
+</phones>

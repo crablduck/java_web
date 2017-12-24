@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<books>
+	<book>
+		<bookid>01</bookid>
+		<name>长物志</name>
+		<price>888</price>
+	</book>
+	<book>
+		<bookid>02</bookid>
+		<name>3天精通JavaEE</name>
+		<price>999</price>
+	</book>
+</books>
