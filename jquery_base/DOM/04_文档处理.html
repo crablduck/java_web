@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery-1.8.2.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				
+				$("#add").click(function(){
+					
+					var newNode = $("<img src='../img/fbb头像.jpg'/>");//创建一个img节点
+					
+					//添加到末尾
+					//$("body").append(newNode);//在body的末尾添加图片
+					//newNode.appendTo($("body"));//把图片添加到body的末尾
+					//添加到第一个位置
+					//$("body").prepend(newNode);//在boby的第一个位置添加图片
+					//newNode.prependTo($("body"));//把图片添加到body的第一个位置
+					
+					//并列关系
+					//$("body").before(newNode);
+					//newNode.insertBefore($("body"));
+					$(this).before(newNode);
+				})
+				
+				$("#del").click(function(){
+					$("img")[0].remove();
+				})
+			})
+		</script>
+		
+		<style type="text/css">
+			img{
+				width: 100px;
+				height: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<img src="../img/fbb头像.jpg" />
+		<input type="button" value="添加图片" id="add"/>
+		<input type="button" value="删除按钮" id="del"/>
+		
+	</body>
+</html>

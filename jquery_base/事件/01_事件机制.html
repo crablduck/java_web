@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery-1.8.2.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				
+				$("#info").click(function(){
+					alert("div层被点击了");
+					$("img").attr("src","../img/meinv2.jpg")
+				})
+				
+				$("#btn").click(function(event){
+					alert("button被点击了");
+					
+					//event.stopPropagation();//阻止冒泡
+					return false;//阻止冒泡
+				})
+				
+			})
+		</script>
+		
+		<style type="text/css">
+			div{
+				width: 200px;
+				height: 200px;
+				border: solid orange 1px;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<img src="../img/fbb头像.jpg"/>
+		
+		<div id="info">
+			<input id="btn" type="button" value="点击"/>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.divFrame {
+				border: solid 1px #ccc;
+				background-color: #eee;
+				width: 60px;
+				height: 60px;
+				font-size: 13px;
+				padding: 5px
+			}
+		</style>
+		<script type="text/javascript" src="../js/jquery-1.8.2.js">
+		</script>
+		<script type="text/javascript">
+			$(function() {
+				
+				$("div").click(function(){
+					
+					/*
+					 * 三个参数：（设置样式，毫秒数，方法）
+					 * 设置样式：历时xx毫秒数后最终完成样式
+					 * 方法：完成了样式以后，最后调用此方法
+					 */
+					$(this).animate({
+						"width":"300px",
+						"height":"300px"
+					},3000,function(){
+						$(this).css("font-size","30px");
+					})
+				})
+				
+			})
+		</script>
+	</head>
+
+	<body>
+		<div class="divFrame">
+			点击变大
+		</div>
+	</body>
+
+</html>

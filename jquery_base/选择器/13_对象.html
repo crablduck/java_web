@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery-1.8.2.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				
+				//DOM对象 --> JQuery对象
+//				var p = document.getElementsByTagName("p")[0];
+//				$(p).click(function(){
+//					$(this).html("如果没努力，就多写点代码");
+//				})
+	
+				//JQuery对象  --> DOM对象
+				var p1 = $("#p1");//注意：返回数组
+				p1[0].onclick = function(){
+					alert("xxx");
+				}
+				
+
+			})
+		</script>
+	</head>
+	<body>
+		
+		<p id="p1">
+			今天你努力了吗？
+		</p>
+		<p>
+			xxxx
+		</p>
+		
+		
+		
+	</body>
+</html>

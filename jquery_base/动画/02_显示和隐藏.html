@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery-1.8.2.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				
+//				$("#btn").toggle(
+//					function(){
+//						//$("#info").slideUp("slow");
+//						//$("#info").slideUp(5000);
+//					},
+//					function(){
+//						//$("#info").slideDown("fast");
+//						//$("#info").slideDown(5000);
+//				})
+				
+				$("#btn").click(function(){
+					$("#info").slideToggle(3000);//显示和隐藏都是3秒钟完成
+				})
+			})
+		</script>
+	</head>
+	<body>
+		
+		<input type="button" value="改变" id="btn"/>
+		<div id="info">
+			<p>古天乐好帅</p>
+			<p>古天乐好帅</p>
+			<p>古天乐好帅</p>
+			<p>古天乐好帅</p>
+			<p>古天乐好帅</p>
+			<p>古天乐好帅</p>
+		</div>
+		
+	</body>
+</html>

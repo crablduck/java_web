@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery-1.8.2.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				
+				$("img").click(function(){
+					//版本一
+//					$(this).css("width","300");
+//					$(this).css("height","300");
+
+					//版本二
+//					if($("img[class='img_class']").length == 1){//查询带有指定class属性的img标签的数量
+//						$(this).removeClass("img_class");
+//					}else if($("img[class='img_class']").length == 0){
+//						$(this).addClass("img_class");
+//					}
+
+					//版本三
+//					if($(this).hasClass("img_class")){//hasClass查看此对象是否有xx类
+//						$(this).removeClass("img_class");
+//					}else{
+//						$(this).addClass("img_class");
+//					}
+					
+					//版本四
+					$(this).toggleClass("img_class");//查看此对象是否有xx类，如果有就删除，没有就添加
+				})
+				
+				$("p").click(function(){
+					//版本一
+//					$(this).css("font-weight","bold");
+//					$(this).css("background-color","blue");
+				})
+				
+			})
+		</script>
+		
+		<style type="text/css">
+			.img_class{
+				width: 300px;
+				height: 300px;
+			}
+			.p_class{
+				font-weight: bold;
+				background-color: blue;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<img src="../img/fbb头像.jpg" />
+		
+		<br />
+		
+		<p>明天你会感激今天的努力！！！</p>
+		
+		
+		
+	</body>
+</html>

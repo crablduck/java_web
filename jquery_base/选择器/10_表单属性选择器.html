@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<script src="../js/jquery-1.8.2.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				
+				/*
+				 * 	 对象.attr("key","value") --- 设置属性
+				 * 	 对象.attr("key") --- 获取属性值
+				 * 
+				 * 	 :disabled 选择不可用的组件
+				 * 	 :enabled 选择可用的组件
+				 */
+				
+				$(":checkbox").click(function(){
+					if($(this).attr("checked") == "checked"){//选中
+						
+						//找到所有不可用的input标签
+						$(":input:disabled").removeAttr("disabled");//删除属性
+					}else{//没选中
+						//找到所有可用的input标签的最有一个组件
+						$(":input:enabled:last").attr("disabled","disabled");//添加属性
+					}
+				})
+			})
+		</script>
+		
+	</head>
+	<body>
+		
+		<div>
+			<h3>XXX注册协议</h3>
+			<p>要遵循xxx公司协议</p>
+		</div>
+		
+		<input type="checkbox"/> 是否同意xx协议，并仔细阅读
+		<br />
+		<form>
+		  <input type="button" value="注册"/>
+		</form>
+		
+		
+	</body>
+</html>

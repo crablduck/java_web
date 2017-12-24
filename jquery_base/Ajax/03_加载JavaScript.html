@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery-1.8.2.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#btn").click(function(){
+					
+					$.getScript("03_myjs.js");
+					
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<input type="button" value="加载JavaScript" id="btn"/>
+		<div id="info"></div>
+	</body>
+</html>

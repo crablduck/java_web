@@ -1,0 +1,10 @@
+<students>
+	<student>
+		<username>张三</username>
+		<email>zhangsan@qq.com</email>
+	</student>
+	<student>
+		<username>李四</username>
+		<email>lisi@qq.com</email>
+	</student>
+</students>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery-1.8.2.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				//鼠标移进移出事件
+				$("#img1").hover(
+					function(){//移进
+						$("#img2").hide();
+					},function(){//移出
+						$("#img2").show();
+					}
+				)
+				
+				$("#img3").toggle(
+					function(){
+						$(this).attr("src","../img/meinv2.jpg");
+					},
+					function(){
+						$(this).attr("src","../img/meinv3.jpg");
+					},
+					function(){
+						$(this).attr("src","../img/meinv1.jpg");
+					}
+				)
+			})
+		</script>
+	</head>
+	<body>
+		<img id="img1" src="../img/fbb头像.jpg"/>
+		<br />		
+		<img id="img2" src="../img/img02.jpg"/>
+		
+		<br />	
+		<img id="img3" src="../img/meinv1.jpg"/>
+		
+	</body>
+</html>

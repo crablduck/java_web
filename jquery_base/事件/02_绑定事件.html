@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery-1.8.2.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				
+//				$("#img").click(function(){
+//					$("#p1").html("哈哈哈哈");
+//				})
+//				$("#img").mouseout(function(){
+//					$("#p1").html("哈哈哈哈");
+//				})
+				
+				//这种写法就是一个对象要在多个事件中执行同样的代码时使用
+//				$("#img").bind("click mouseout",function(){
+//					$("#p1").html("哈哈哈哈");
+//				})
+				
+				//映射绑定多个事件
+				$("#img").bind(
+					{
+						"click":function(){$("#p1").html("哈哈哈哈");},
+						"mouseout":function(){$("#p1").html("嘿嘿嘿");}
+					}
+				)
+				
+				//解绑
+				$("#btn").click(function(){
+					//$("#img").unbind("mouseout");//解绑指定事件
+					$("#img").unbind();//解绑该对象上的所有事件
+				})
+				
+			})
+		</script>
+		
+	</head>
+	<body>
+		
+		<img src="../img/fbb头像.jpg" id="img"/>
+		<p id="p1"></p>
+		
+		<input type="button" id="btn" value="解绑" />
+	</body>
+</html>

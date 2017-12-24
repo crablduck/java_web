@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery-1.8.2.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				
+				//$("div[id]").css("color","red");
+				//$("div[id='letterman']").css("color","red");
+				//$("div[name!='newmilk']").css("color","red");
+				//$("div[name^='new']").css("color","red");//属性值以xx开头
+				//$("div[name$='man']").css("color","red");//属性值以xx结尾
+				//$("div[id*='man']").css("color","red");//属性值包含xx
+				$("div[id][name*=milk]").css("color","red");//组合属性选择器
+				
+			})
+		</script>
+	</head>
+	<body>
+		
+		<div id="man-news"   name="man-news">div1</div>
+		<div 				 name="milkman">div2</div>
+		<div id="letterman"  name="new-letterman">div3</div>
+		<div 				 name="newmilk" >div4</div>
+		<div id="hhy"		 name="newmilk" >div5</div>
+		
+	</body>
+</html>

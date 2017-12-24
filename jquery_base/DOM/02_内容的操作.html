@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery-1.8.2.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				
+				//获取内容
+//				alert($("#p1").html());
+//				alert($("#p2").text());
+				
+				//设置内容
+//				$("#p1").html("<h1>xxx</h1>");
+//				$("#p2").text("<h1>xxx</h1>")
+				
+				$("#username").blur(function(){//失去焦点事件
+					
+					var value = $(this).val().trim();//获取value属性中的值,并去空格
+					if(value == ""){
+						$("#username+span").css("color","red");
+						$("#username+span").html("账号不能为空！！！");
+						$(this).val("");//这是value属性中的值
+					}else{
+						$("#username+span").html("");
+					}
+				})
+				
+				
+			})
+		</script>
+	</head>
+	<body>
+		
+		<p id="p1">xxx</p>
+		<p id="p2">ccc</p>
+		
+		账号：<input type="text" id="username" /><span></span><br/>
+		密码：<input type="password" id="password"/>
+		
+		
+		
+	</body>
+</html>

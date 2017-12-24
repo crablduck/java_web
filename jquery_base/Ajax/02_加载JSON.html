@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery-1.8.2.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#btn").click(function(){
+					
+					$.getJSON("02_myjson.json",function(data){//data指的是JSON文件
+						var str = "";
+						$.each(data,function(index,stu){//stu指的是json文件中一个个的对象
+							
+							//第一种写法
+							//str += stu.username + " --- " + stu.email + "<br/>";
+							//第二种写法
+							//str += stu["username"] + " --- " + stu["email"] + "<br/>";
+							//第三种写法
+							//str += $(this)[0].username + " --- " + $(this)[0].email + "<br/>";
+							//第四种写法
+							str += $(this)[0]["username"] + " --- " + $(this)[0]["email"] + "<br/>";
+							
+						})
+						$("#info").html(str);
+					})
+					
+					
+					
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<input type="button" value="加载JSON" id="btn"/>
+		<div id="info"></div>
+	</body>
+</html>

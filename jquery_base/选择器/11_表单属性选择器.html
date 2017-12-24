@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery-1.8.2.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				//选择选中的checkbox
+				//$(":checked").css("color","red");		
+				
+				//选择有此属性（selected="selected"）的组件
+				$(":selected").css("color","red");
+			})
+		</script>
+	</head>
+	<body>
+		
+		<form>
+		  <input type="checkbox" name="newsletter" checked="checked" value="Daily" />
+		  <input type="checkbox" name="newsletter"					 value="Weekly" />
+		  <input type="checkbox" name="newsletter" checked="checked" value="Monthly" />
+		</form>
+		
+		<select>
+		  <option value="1">Flowers</option>
+		  <option value="2" selected="selected">Gardens</option>
+		  <option value="3">Trees</option>
+		</select>
+		
+	</body>
+</html>

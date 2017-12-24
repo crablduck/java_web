@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			img{width: 200px; height: 200px;}
+		</style>
+		<script src="../js/jquery-1.8.2.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				
+				//遍历3次。有三个对象
+				$("img").each(function(){
+					//分别给三个对象绑定监听器（单击事件）
+					$(this).click(function(){
+						$(this).attr("src","../img/meinv2.jpg");
+					})
+				})
+			})
+		</script>
+		
+	</head>
+	<body>
+		<img src="../img/fbb头像.jpg" id="img1" />
+		<img src="../img/fbb头像.jpg" id="img2"/>
+		<img src="../img/fbb头像.jpg" id="img3"/>
+	</body>
+</html>

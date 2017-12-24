@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery-1.8.2.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				
+				var array = [false,false];
+				
+				//账号不能为空的功能
+				$("#username").blur(function(){
+					var value = $(this).val().trim();
+					if(value == ""){
+						$("#username+span").html("账号不能为空");
+						array[0] = false;
+					}else{
+						array[0] = true;
+					}
+				})
+				
+				//密码不能为空的功能
+				$("#password").blur(function(){
+					var value = $(this).val().trim();
+					if(value == ""){
+						$("#password+span").html("密码不能为空");
+						array[1] = false;
+					}else{
+						array[1] = true;
+					}
+				})
+				
+				//提交事件
+				$("#form").submit(function(){
+					
+					//自动触发事件
+					$("#username").trigger("blur");
+					$("#password").trigger("blur");
+					
+					
+					for(var i=0;i<array.length;i++){
+						var bool = array[i];
+						if(bool == false){
+							return false;
+						}
+					}
+				})
+			})
+		</script>
+		<style type="text/css">
+			span{color: red;}
+		</style>
+	</head>
+	<body>
+		
+		
+		<form action="#" method="post" id="form">
+			
+			账号：<input type="text" id="username" name="username"/><span></span><br/> 
+			密码：<input type="password" id="password" name="password"/><span></span><br/> 
+			<input type="submit" value="注册"/>			
+		</form>
+		
+		
+		
+	</body>
+</html>

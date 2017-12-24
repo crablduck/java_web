@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery-1.8.2.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				//后代选择器
+				//$("#parent #child_1_1").css("color","red");
+				//子代选择器
+				//$("#parent>#child_2").css("color","red");
+				//相邻兄弟选择器
+				//$("#child_2+div").css("color","red");//找到后面一个兄弟
+				//$("#child_2~div").css("color","red");//找到后面所有兄弟
+				$("#child_2").siblings().css("color","red");//找到前后的所有兄弟
+			})
+			
+		</script>
+	</head>
+	<body>
+		
+		<div id="parent">
+			<div id="child_1">child_1
+				<div id="child_1_1">child_1_1</div>
+			</div>
+			<div id="child_2">child_2
+				<div id="child_2_1">child_2_1</div>
+			</div>
+			<div id="child_3">child_3
+				<div id="child_3_1">child_3_1</div>
+			</div>
+			<div id="child_4">child_4
+				<div id="child_4_1">child_4_1</div>
+			</div>
+		</div>
+		
+	</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<script src="../js/jquery-1.8.2.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("tr:odd").css("color","green");
+				$("tr:even:not(:first)").css("color","red");				
+			})
+		</script>
+		
+	</head>
+	<body>
+		<table border="1">
+			<tr>
+				<th>姓名</th>
+				<th>性别</th>
+				<th>年龄</th>
+			</tr>
+			<tr>
+				<td>谢家伟</td>
+				<td>男</td>
+				<td>20</td>
+			</tr>
+			<tr>
+				<td>波多野结衣</td>
+				<td>女</td>
+				<td>21</td>
+			</tr>
+			<tr>
+				<td>加藤鹰</td>
+				<td>男</td>
+				<td>60</td>
+			</tr>
+			<tr>
+				<td>桃谷绘里香</td>
+				<td>女</td>
+				<td>18</td>
+			</tr>
+		</table>
+		
+	</body>
+</html>

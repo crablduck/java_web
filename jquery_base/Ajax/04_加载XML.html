@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery-1.8.2.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#btn").click(function(){
+					
+					$.get("04_myxml.xml",function(data){
+						var str = "";
+						$(data).find("student").each(function(){
+							str += $(this).find("username").text() + " -- " + $(this).find("email").text() + "<br/>";
+						})
+						$("#info").html(str);
+					})
+					
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<input type="button" value="加载XML" id="btn"/>
+		<div id="info"></div>
+	</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<script src="../js/jquery-1.8.2.js" type="text/javascript" charset="utf-8"></script>
+		
+	</head>
+	<body>
+		
+		<h1>一级标签1</h1>
+		<h1 id="id_hh2">一级标签2</h1>
+		<h1 class="class_hh3">一级标签3</h1>
+		
+		<div>
+			<span class="class_hh3">span</span>
+		</div>
+		
+		
+		
+		<script type="text/javascript">
+			$(function(){
+				
+				/*
+				 * JQuery选择器：
+				 * 		通过不同的选择器选择相应的元素对象，操作内容（CSS、文本信息、属性）
+				 * 	特点：不同的选择器可以互相组合，使得选择器功能加大
+				 */
+				
+				//通配符选择器
+				//$("*").css("display","none");
+				
+				//id选择器
+				//$("#id_hh2").css("display","none");
+				
+				//类选择器
+				//$(".class_hh3").css("display","none");
+				
+				//标签选择器
+				//$("h1").css("display","none");
+				
+				//后代选择器
+				$("div .class_hh3").css("color","red");
+				
+			})
+		</script>
+	</body>
+</html>

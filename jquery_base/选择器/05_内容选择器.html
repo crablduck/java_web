@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<script src="../js/jquery-1.8.2.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			
+			$(function(){
+				//判断是否包含
+				//$("div:contains('John')").css("color","red");
+				//判断内容是否为空
+				//$("div:empty").html("哈哈哈哈，卡卡就发");
+				//选择带有p标签的div
+				//$("div:has(p)").addClass("xx");
+				//选择当了爸爸的div，把内容是做div的孩子
+				$("div:parent").css("color","red");
+			})
+			
+		</script>
+		<style type="text/css">
+			.xx{color: red;}
+		</style>
+	</head>
+	<body>
+		<div>John Resig</div>
+		<div>George Martin</div>
+		<div>Malcom John Sinclair</div>
+		<div></div>
+		<div></div>
+		<div>J. Ohn</div>
+		<div><p>HelloWorld</p></div>
+		
+	</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery-1.8.2.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script type="text/javascript">
+			
+			/*
+			 * :visible 查询显示的组件
+			 * :hidden 查询隐藏的组件
+			 */
+			$(function(){
+				$("#hidden_btn").click(function(){
+					$("div:visible").css("display","none");
+				})
+				
+				$("#visible_btn").click(function(){
+					$("div:hidden").css("display","block");
+				})
+			})
+		</script>
+		
+	</head>
+	<body>
+		
+		<input id="hidden_btn" type="button" value="隐藏"/>
+		<input id="visible_btn" type="button" value="显示"/>
+		<br />
+		<div>
+			<h1>一级标签</h1>
+			<h1>一级标签</h1>
+			<h1>一级标签</h1>
+			<h1>一级标签</h1>
+			<h1>一级标签</h1>
+			<h1>一级标签</h1>
+		</div>
+		
+		
+	</body>
+</html>

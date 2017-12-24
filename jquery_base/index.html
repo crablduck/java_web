@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		
+		<!--加载JQuery的框架到此html中-->
+		<script src="js/jquery-1.8.2.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script type="text/javascript">
+		
+		/**
+		 *	 $(document).ready() 类似于 window.onload
+		 * 	 区别：
+		 * 		1.前者有几个，都是依次执行，而后者的最后一个会覆盖之前的
+		 * 		2.前者页面加载完信息后，就执行，而后者要在页面完全加载完毕后才执行（信息+图片资源）
+		 * 
+		 * 
+		 * 	学习JQuery的步奏：
+		 * 		1.选择器
+		 * 		2.DOM和事件
+		 * 		3.动画
+		 * 		4.JQuery 4 AJAX
+		 */
+			
+			//以后就在此function中写JQuery的代码
+			$(document).ready(function(){
+				alert("吴彦祖手把手教你来学jQuery");
+			})
+			
+			$(document).ready(function(){
+				alert("古天乐手把手教你来学jQuery");
+			})
+			
+			//简化
+			$(function(){
+				alert("何老师手把手教你来学jQuery");
+			})
+			
+//			window.onload = function(){
+//				alert("薛之谦手把手教你手撕前任女友");
+//			}
+//			
+//			window.onload = function(){
+//				alert("炮王手把手教你手撕前任女友");
+//			}
+			
+			
+		</script>
+		
+	</head>
+	<body>
+		
+	</body>
+</html>

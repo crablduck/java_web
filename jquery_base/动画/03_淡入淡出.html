@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery-1.8.2.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				
+				$("#btn").toggle(
+					function(){
+						$("#info").fadeOut(3000);
+					},
+					function(){
+						$("#info").fadeIn(3000)
+				})
+				
+				$("#btn2").click(function(){
+					$("#img").fadeTo(3000,0.2);//花3秒把图片变成0.2透明度的图片
+				})
+				
+			})
+		</script>
+	</head>
+	<body>
+		
+		<input type="button" value="改变" id="btn"/>
+		<div id="info">
+			<p>古天乐好帅</p>
+			<p>古天乐好帅</p>
+			<p>古天乐好帅</p>
+		</div>
+		
+		<input type="button" value="改变图片透明度" id="btn2"/>
+		<img id="img" src="../img/fbb头像.jpg"/>
+		
+	</body>
+</html>
