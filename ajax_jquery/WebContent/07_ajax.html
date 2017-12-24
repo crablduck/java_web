@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-1.8.2.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				
+				$("#username").blur(function(){
+					
+					$.ajax(
+							{
+								type:"get",
+								url:"07_myjsp.jsp",
+								data:"username="+$("#username").val(),
+								async:true,
+								success:function(data){
+									$("#username+span").html(data);
+									$("#img").removeAttr("src");
+								},
+								error:function(){
+									alert("发生错误");
+								},
+								beforeSend:function(){
+									$("#img").attr("src","img/Loading.gif");
+								}
+							}
+					)
+					
+					
+				})
+			})
+		</script>
+	</head>
+	<body>
+		
+		<form action="#" method="post">
+			
+			账号：<input type="text" name="username" id="username" /><span></span><img id="img"/><br/>
+			other：<input type="text"/><br/>
+			<input type="submit" value="注册" />
+			
+			
+			
+		</form>
+		
+		
+		
+	</body>
+</html>

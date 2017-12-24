@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-1.8.2.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				
+				$("#username").blur(function(){
+					$.get(
+						"05_myjsp.jsp",
+						{"username":$("#username").val()},
+						function(data){//回调函数
+							
+							var str = data.trim();
+							if(str =="1"){
+								$("#username+span").html("用户名重复");
+							}else if(str == "0"){
+								$("#username+span").html("用户名可用");
+							}
+						}
+					)
+				})
+			})
+		</script>
+	</head>
+	<body>
+		
+		<form action="#" method="post">
+			
+			账号：<input type="text" name="username" id="username" /><span></span><br/>
+			other：<input type="text"/><br/>
+			
+			<input type="submit" value="注册" />
+		</form>
+		
+		
+		
+	</body>
+</html>
